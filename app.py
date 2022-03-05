@@ -89,10 +89,5 @@ def index():
     
 
 if __name__ == '__main__':
-    app.run(debug=True)
-
-
+    app.run()
 app.config['SECRET_KEY'] = '303-960-994'
-
-toolbar = DebugToolbarExtension(app)
-
