@@ -5,7 +5,7 @@ from tensorflow.keras.models import model_from_json
 from tensorflow.keras.preprocessing import image  
 
 # Importing Flask debugging tool
-from flask_debugtoolbar import DebugToolbarExtension  
+# from flask_debugtoolbar import DebugToolbarExtension  
 
 #load model  
 model = model_from_json(open("fer.json", "r").read())  
@@ -90,4 +90,4 @@ def index():
 
 if __name__ == '__main__':
     app.run()
-app.config['SECRET_KEY'] = '303-960-994'
+# app.config['SECRET_KEY'] = '303-960-994'
