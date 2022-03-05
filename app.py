@@ -3,7 +3,9 @@ import cv2
 import numpy as np
 from tensorflow.keras.models import model_from_json  
 from tensorflow.keras.preprocessing import image  
-  
+
+# Importing Flask debugging tool
+from flask_debugtoolbar import DebugToolbarExtension  
 
 #load model  
 model = model_from_json(open("fer.json", "r").read())  
@@ -22,6 +24,11 @@ camera = cv2.VideoCapture(0)
 @app.route('/')
 def base():
     return render_template('base.html')
+
+@app.route('/terminal')
+def terminal():
+    return render_template('terminal.html')
+
 
 def gen_frames():  # generate frame by frame from camera
     while True:
@@ -65,16 +72,27 @@ def gen_frames():  # generate frame by frame from camera
             yield (b'--frame\r\n'
                    b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')  # concat frame one by one and show result
 
-@app.route('/home/video_feed')
+# @app.route('/home/video_feed')
+# def video_feed():
+#     #Video streaming route. Put this in the src attribute of an img tag
+#     return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+
+
+@app.route('/terminal/home/video_feed')
 def video_feed():
     #Video streaming route. Put this in the src attribute of an img tag
     return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
-@app.route('/home')
+@app.route('/terminal/home')
 def index():
     return render_template('index.html')
     
 
-
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+app.config['SECRET_KEY'] = '303-960-994'
+
+toolbar = DebugToolbarExtension(app)
+

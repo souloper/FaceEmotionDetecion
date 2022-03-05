@@ -1,91 +1,126 @@
 <!doctype html>
 <html lang="en">
+
 <head>
 
-    <title>FRS - Helps to detect emotion!</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FRS - Helps to detect emotion!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">        
-    
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'> 
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'> 
-
-    
-    <link rel="stylesheet" href="../static/inc/animations/css/animate.min.css">
-    <link rel="stylesheet" href="../static/inc/font-awesome/css/font-awesome.min.css">
-
-    <!-- {{ url_for('static', filename='index.js') }} -->
-    
-    <link rel="stylesheet" href="../static/css/reset.css">
-    <link rel="stylesheet" href="../static/css/style.css">
-    <link rel="stylesheet" href="../static/css/mobile.css">
-
-    <!-- Skin CSS, Dont worry we dont need this! -->
-    <!-- <link rel="stylesheet" href="../static/css/skin/cool-gray.css"> -->
-
-    <link rel="stylesheet" href="css/templatemo-main.css">
-    <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="shortcut icon" href="../static/img/icon/user.svg" type="image/x-icon">
 
 
-    <!-- For manual styling babe -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    
-    <!-- Those are Bootstrap CDNs bruhh!! -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <!-- For manual styling babe -->
+
+  <!-- <link rel="stylesheet" href="../static/css/reset.css"> -->
+  <link rel="stylesheet" href="../static/css/style2.css">
+  <!-- <link rel="stylesheet" href="../static/css/mobile.css"> -->
+
+  <!-- Skin CSS, Dont worry we dont need this! -->
+  <!-- <link rel="stylesheet" href="../static/css/skin/cool-gray.css"> -->
+
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+
+  <!-- Those are Bootstrap CDNs bruhh!! -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <!-- Animate js CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- New jQuery CDN Added -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
 </head>
-<body data-spy="scroll" data-target="#main-navbar" style="background-color:#002147;">
-    
-     <div class="page-loader"></div>  <!-- Displaying loading gif while page loads -->
-     
 
-    <div class="parallax-content baner-content" id="home">
-        <div class="container">
-            <div class="row">
 
-                <div class="col-lg-8  col-lg-offset-lg-2" action="/home/video_feed">
-                    <h3 class="mt-5" style="font-family:verdana; color:white; font-size:300%;"> Real Time Emotion Detection</h3>
-                    <div class="img-thumbnail">
-                        <img id="cam_op" src="{{ url_for('video_feed') }}" width="100%">
-                    </div>
-                </div>
-            </div>
-        </div>
+<body id="wrap" data-spy="scroll" data-target="#main-navbar" style="background-color:#f8f9fa">
 
-    
-    <!-- Problems casued due to version changing -->
-    <div class="footer position-absolute">
-        <div class="container text-center text-white fixed-bottom" data-wow-delay="0.4s">
-            <p class="copyright">Designed and Developed <br>with 💖 by <br><a href="#" class="theme-author glow">SOUMYA</a> | <a href="#" class="theme-author glow">PRERANA</a> | <a href="#" class="theme-author glow">ANANDAMAYEE</a> | <a href="#" class="theme-author glow">ANIK</a></p>
+  <div class="page-loader"></div> <!-- Displaying loading gif while page loads -->
+
+  <!-- <div id="wrap"></div> -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Tenth navbar example">
+    <div class="container-fluid">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+          <img src="../static/img/logo2.gif" alt="logo" width="50" height="50">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08"
+        aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/">About</a>
+          </li>
+          <!-- <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown08" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown08">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul> -->
+      </div>
     </div>
+  </nav>
+
+  <div class="container">
+
+    <div class="text-center" action="/terminal/home/video_feed">
+      <h3 class="cam_header animate__animated animate__bounce"><sup>Experience</sup> OUR Real Time Emotion Detection
+        System</h3>
+        <h5>Hola <b class="user_name"></b>, Currently your mood is {{ predicted }}</h5>
+      <div class="img-thumbnail shadow-lg bg-body rounded outer-card">
+        <img id="cam_op"
+          class="rounded mx-auto d-block shadow-lg bg-body rounded animate__animated animate__pulse animate__repeat-3 animate__slow"
+          src="{{ url_for('video_feed') }}" width="60%">
+      </div>
     </div>
 
-</footer>
 
+    <!-- <div class="footer"> -->
+    <div class="footer_index container position-relative text-center text-black fixed-bottom" data-wow-delay="0.4s">
+      <p class="copyright">Designed and Developed <br>with &#x1F496; by <br><a href="#" class="theme-author glow">SOUMYA</a> | <a
+          href="#" class="theme-author glow">ANIK</a></p>
+    </div>
+    <!-- </div> -->
+    </footer>
 
+    <!-- <script src="{{ url_for('static', filename='index.js') }}"></script> -->
 
-    <script src="{{ url_for('static', filename='index.js') }}"></script>
+    <!-- Plugins JS Bruuhhhh!!-->
 
+    <!-- <script src="../static/inc/animations/js/wow.min.js"></script> -->
+    <script src="../static/inc/waypoints.min.js"></script>
+    <!-- <script src="../static/inc/isotope.pkgd.min.js"></script> -->
+    <!-- <script src="../static/inc/classie.js"></script> -->
+    <script src="../static/inc/jquery.easing.min.js"></script>
+    <script src="../static/inc/jquery.counterup.min.js"></script>
+    <!-- <script src="../static/inc/smoothscroll.js"></script> -->
 
-            <!-- Plugins JS Bruuhhhh!!-->
-		<script src="../static/inc/jquery/jquery-1.11.1.min.js"></script>
-		<script src="../static/inc/bootstrap/js/bootstrap.min.js"></script>
-		<script src="../static/inc/owl-carousel/js/owl.carousel.min.js"></script>
-		<script src="../static/inc/stellar/js/jquery.stellar.min.js"></script>
-		<script src="../static/inc/animations/js/wow.min.js"></script>
-        <script src="../static/inc/waypoints.min.js"></script>
-		<script src="../static/inc/isotope.pkgd.min.js"></script>
-		<script src="../static/inc/classie.js"></script>
-		<script src="../static/inc/jquery.easing.min.js"></script>
-		<script src="../static/inc/jquery.counterup.min.js"></script>
-		<script src="../static/inc/smoothscroll.js"></script>
+    <script>
+      let name = prompt("Enter your name");
+      $(".user_name").text(name);
 
-		<!-- Js ka preloaded theme -->
-		<script src="../static/js/theme.js"></script>
-
+      if (name == null || name == "") {
+        alert("Name must be filled out");
+        location.reload();
+      }
+    </script>
 </body>
+
 </html>

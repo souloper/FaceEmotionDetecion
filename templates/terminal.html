@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/terminal.css">
+    <link rel="shortcut icon" href="../static/img/icon/terminal.svg" type="image/x-icon">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js" integrity="sha512-jq8sZI0I9Og0nnZ+CfJRnUzNSDKxr/5Bvha5bn7AHzTnRyxUfpUArMzfH++mwE/hb2efOo1gCAgI+1RMzf8F7g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    
+    <!-- Animate js CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+    <script src="../static/js/particles.min.js"></script>
+    <script src="../static/js/typed.custom.js"></script>
+    <title>Terminal</title>
+  </head>
+  <body>
+    <div id="particles-js"></div>
+    <div class="terminal-window">
+      <header>
+        <div class="button green"></div>
+        <div class="button yellow"></div>
+        <div class="button red"></div>
+      </header>
+      <section class="terminal">
+        <div class="history"></div>
+        $&nbsp;<span class="prompt"></span>
+        <span class="typed-cursor"></span>
+      </section>
+    </div>
+    <!-- data -->
+    <div class="terminal-data mimik-run-output">
+      <br />* Serving Server app 'app' (lazy loading)<br />
+      ----------------------------------------------<br />
+      * Environment: production <span class="gray"># ./venv/Scripts/activate</span
+      ><br /> <span style="color: red;">&emsp; WARNING: This is a development server.</span>
+      <br /><br />
+
+      &nbsp;&nbsp;Use a production WSGI server instead.<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="green">✓</span>
+      <span class="gray">* Debugger is active!</span><br />
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="green">✓</span>
+      <span class="gray">* Debugger PIN: 123-864-492</span><br />
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="green">✓</span>
+      <span class="gray">* Running on <a href="/terminal/home" style="color:grey;"><i class="animate__animated animate__pulse animate__repeat-3 animate__slow">http://127.0.0.1:5000/</i></a> (Press CTRL+C to quit)</span><br />
+      <br />
+      <span class="gray"
+        >&nbsp;---------- ----------- ------- -------- --------</span
+      ><br />
+      <!-- &nbsp;&nbsp;Features&nbsp;&nbsp;&nbsp;Scenarios&nbsp;&nbsp;&nbsp;Steps&nbsp;&nbsp;&nbsp;Passed&nbsp;&nbsp;&nbsp;Failed<br /> -->
+      <!-- <span class="gray"
+        >&nbsp;---------- ----------- ------- -------- --------</span
+      ><br /> -->
+      <!-- &nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+        class="green"
+        >✓ 4</span 
+      >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 <br /> -->
+      <br />
+      &nbsp;&nbsp;Started server in 0.06s<br />
+      <br />
+      &nbsp;&nbsp;Kindly, Headover to the running port :5000 or <a style="color:white;" href="/terminal/home" target="_blank">click here</a>.<br />
+      <br />
+    </div>
+
+    <script src="../static/terminal.js"></script>
+  </body>
+</html>
