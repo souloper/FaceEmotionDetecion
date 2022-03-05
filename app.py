@@ -1,5 +1,5 @@
 from flask import Flask, render_template, Response
-import cv2
+import cv2, os
 import numpy as np
 from tensorflow.keras.models import model_from_json  
 from tensorflow.keras.preprocessing import image  
@@ -87,7 +87,7 @@ def video_feed():
 def index():
     return render_template('index.html')
     
-
+port = os.environ.get("PORT", 5000)
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=False, host="0.0.0.0", port=port)
 # app.config['SECRET_KEY'] = '303-960-994'
