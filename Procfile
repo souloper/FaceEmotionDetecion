@@ -1,1 +1,1 @@
-gunicorn app.wsgi:app --workers 1 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:$port --timeout 600
+gunicorn app.wsgi --workers 2 --worker-class=gevent --bind 0.0.0.0:$port --timeout 600
