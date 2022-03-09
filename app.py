@@ -4,6 +4,8 @@ import numpy as np
 from tensorflow.keras.models import model_from_json  
 from tensorflow.keras.preprocessing import image  
 
+from gevent.pywsgi import WSGIServer
+
 # Importing Flask debugging tool
 # from flask_debugtoolbar import DebugToolbarExtension  
 
@@ -90,5 +92,7 @@ def index():
 port = os.environ.get("PORT", 5000)
 
 if __name__ == '__main__':
-    app.run(debug=True, host="0.0.0.0", port=port)
+    # app.run(debug=False, host="0.0.0.0", port=port)
+    http_server = WSGIServer(('', 5000), app)
+    http_server.serve_forever()
 # app.config['SECRET_KEY'] = '303-960-994'
