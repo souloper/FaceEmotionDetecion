@@ -1,7 +1,7 @@
 from flask import Flask, render_template, Response
 import cv2, os
 import numpy as np
-from tensorflow.keras.models import model_from_json  
+from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image  
 
 from gevent.pywsgi import WSGIServer
@@ -10,10 +10,8 @@ from gevent.pywsgi import WSGIServer
 # from flask_debugtoolbar import DebugToolbarExtension  
 
 #load model  
-model = model_from_json(open("fer.json", "r").read())  
-
-#load weights  
-model.load_weights('fer.h5')  
+ 
+model = load_model("fer.h5")
 
 
 face_haar_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')  
