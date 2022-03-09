@@ -1,1 +1,1 @@
-gunicorn app.wsgi --workers 2 --worker-class=gevent --bind 0.0.0.0:$port --timeout 600
+gunicorn app.wsgi --workers 1 --worker-class=gevent --bind 0.0.0.0:$PORT --timeout 600
