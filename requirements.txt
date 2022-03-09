@@ -3,3 +3,4 @@ gevent==21.12.0
 numpy==1.18.5
 opencv_python==4.5.4.58
 tensorflow==1.15.2
+gunicorn
