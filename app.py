@@ -91,7 +91,7 @@ def index():
 port = os.environ.get("PORT", 8080)
 
 if __name__ == '__main__':
-    app.run(debug=False, host="0.0.0.0", port=port)
-#     http_server = WSGIServer(('', 5000), app)
-#     http_server.serve_forever()
+#     app.run(debug=False, host="0.0.0.0", port=port)
+    http_server = WSGIServer(('', 8080), app)
+    http_server.serve_forever()
 # app.config['SECRET_KEY'] = '303-960-994'
