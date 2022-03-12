@@ -1,17 +1,18 @@
 from flask import Flask, render_template, Response
 import cv2, os
 import numpy as np
-from tensorflow.keras.models import model_from_json  
+import tensorflow
+ 
+from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image  
+from gevent.pywsgi import WSGIServer
 
 # Importing Flask debugging tool
 # from flask_debugtoolbar import DebugToolbarExtension  
 
 #load model  
-model = model_from_json(open("fer.json", "r").read())  
-
-#load weights  
-model.load_weights('fer.h5')  
+model=load_model(
+    'fer.h5')
 
 
 face_haar_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')  
@@ -87,8 +88,12 @@ def video_feed():
 def index():
     return render_template('index.html')
     
-port = os.environ.get("PORT", 5000)
+port = os.environ.get("PORT", 8080)
 
 if __name__ == '__main__':
-    app.run(debug=False, host="0.0.0.0", port=port)
-# app.config['SECRET_KEY'] = '303-960-994'
+#     app.run(debug=False, host="0.0.0.0", port=port)
+    # http_server = WSGIServer(('', 8080), app)
+    # http_server.serve_forever()
+    from waitress import serve
+    serve(app, host="0.0.0.0")
+
