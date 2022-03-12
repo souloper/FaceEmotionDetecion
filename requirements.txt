@@ -1,6 +1,6 @@
 Flask==2.0.2
 numpy==1.18.5
 opencv-python-headless==4.5.5.64
-tensorflow==1.15.2
-gunicorn==20.0.4
+tensorflow-cpu==1.15.2
+gunicorn==20.0.0
 waitress==2.0.0
