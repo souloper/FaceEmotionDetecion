@@ -92,8 +92,8 @@ port = os.environ.get("PORT", 8080)
 
 if __name__ == '__main__':
 #     app.run(debug=False, host="0.0.0.0", port=port)
-    # http_server = WSGIServer(('', 8080), app)
-    # http_server.serve_forever()
-    from waitress import serve
-    serve(app, host="0.0.0.0")
+    http_server = WSGIServer(('', 8080), app)
+    http_server.serve_forever()
+#     from waitress import serve
+#     serve(app, host="0.0.0.0")
 
