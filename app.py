@@ -11,8 +11,7 @@ from gevent.pywsgi import WSGIServer
 # from flask_debugtoolbar import DebugToolbarExtension  
 
 #load model  
-model=load_model(
-    'fer.h5')
+model=load_model('fer.h5')
 
 
 face_haar_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')  
