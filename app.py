@@ -5,14 +5,13 @@ import tensorflow
  
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image  
-from gevent.pywsgi import WSGIServer
+# from gevent.pywsgi import WSGIServer
 
 # Importing Flask debugging tool
 # from flask_debugtoolbar import DebugToolbarExtension  
 
 #load model  
-model=load_model(
-    'fer.h5')
+model=load_model('fer.h5')
 
 
 face_haar_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')  
@@ -91,7 +90,9 @@ def index():
 port = os.environ.get("PORT", 8080)
 
 if __name__ == '__main__':
+    app.run(debug=True)
+
 #     app.run(debug=False, host="0.0.0.0", port=port)
-    http_server = WSGIServer(('', 8080), app)
-    http_server.serve_forever()
+    # http_server = WSGIServer(('', 8080), app)
+    # http_server.serve_forever()
 # app.config['SECRET_KEY'] = '303-960-994'

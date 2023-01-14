@@ -1,6 +1,6 @@
 Flask==2.0.2
-gevent==21.12.0
+gevent
 numpy==1.18.5
 opencv-python-headless==4.5.5.64
-tensorflow==1.15.2
+tensorflow
 gunicorn
